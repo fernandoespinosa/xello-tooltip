@@ -8,14 +8,16 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-1">
-      <button type="button" tooltipManager ngbTooltip="You clicked Foo!" triggers="click:blur" placement="right" class="btn btn-primary btn-lg col-2">
+      <button type="button" tooltipManager ngbTooltip="Tooltip!" placement="right" triggers="manual" #fooTooltip="ngbTooltip" (click)="fooTooltip.open()"
+        class="btn btn-primary btn-lg col-2">
         Foo
       </button>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-1">
-      <button type="button" tooltipManager ngbTooltip="You clicked Bar!" triggers="click:blur" placement="right" class="btn btn-primary btn-lg col-2">
+      <button type="button" tooltipManager ngbTooltip="Tooltip!" placement="right" triggers="manual" #barTooltip="ngbTooltip" (click)="barTooltip.open()"
+        class="btn btn-primary btn-lg col-2">
         Bar
       </button>
     </div>
