@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppComponent } from './app.component';
+import { TooltipManagerDirective } from './directives/tooltip-manager.directive';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TooltipManagerDirective
   ],
   imports: [
     NgbModule.forRoot(),
