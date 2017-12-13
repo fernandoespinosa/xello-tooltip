@@ -7,17 +7,19 @@
 <h2>Here are some buttons to play with:</h2>
 <div class="container">
   <div class="row">
-    <div class="col-lg-1">
-      <button type="button" tooltipManager ngbTooltip="Tooltip!" placement="right" triggers="manual" #fooTooltip="ngbTooltip" (click)="fooTooltip.open()"
-        class="btn btn-primary btn-lg col-2">
+    <div class="col">
+      <ng-template #fooTooltipTemplate>
+        You clicked Foo. Click outside this tooltip to close it!
+      </ng-template>
+      <button type="button" tooltipManager [ngbTooltip]="fooTooltipTemplate" placement="bottom" triggers="manual" class="btn btn-primary btn-lg btn-block">
         Foo
       </button>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-1">
-      <button type="button" tooltipManager ngbTooltip="Tooltip!" placement="right" triggers="manual" #barTooltip="ngbTooltip" (click)="barTooltip.open()"
-        class="btn btn-primary btn-lg col-2">
+    <div class="col">
+      <ng-template #barTooltipTemplate>
+        You clicked Bar. Click outside this tooltip to close it!
+      </ng-template>
+      <button type="button" tooltipManager [ngbTooltip]="barTooltipTemplate" placement="bottom" triggers="manual" class="btn btn-primary btn-lg btn-block">
         Bar
       </button>
     </div>

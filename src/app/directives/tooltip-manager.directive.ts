@@ -13,23 +13,18 @@ export class TooltipManagerDirective {
 
   @HostListener('document:click', ['$event'])
   private documentClick(event: MouseEvent): void {
-    console.log('documentClick @:', this.tooltipId);
-    
-    if (this.tooltip && this.tooltip.isOpen()) {
-      console.log('tooltip is open:', this.tooltip);
 
-      if (this.element.nativeElement.contains(event.target)) {
-        console.log('clicked inside:', this.element);
-      } else {
-        const tooltipWindowRef: ComponentRef<NgbTooltip> = (this.tooltip as any)._windowRef;
-        if (tooltipWindowRef.location.nativeElement.contains(event.target)) {
-          console.log('clicked inside:', tooltipWindowRef);
-        } else {
-          console.log('clicked outside:', tooltipWindowRef);
-          this.tooltip.close();
-        }
+    if (this.tooltip.isOpen()) {
+      const tooltipWindowRef: ComponentRef<NgbTooltip> = (this.tooltip as any)._windowRef;
+      const clickedInsideTooltip: boolean = tooltipWindowRef.location.nativeElement.contains(event.target);
+      if (!clickedInsideTooltip) {
+        this.tooltip.close();
+      }
+    } else {
+      const clickedInsideButton: boolean = this.element.nativeElement.contains(event.target);
+      if (clickedInsideButton) {
+        this.tooltip.open();
       }
     }
   }
-
 }
