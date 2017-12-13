@@ -45,10 +45,10 @@
   - ... :worried:
 
 # Further Notes
+## Development
 - Development was done in `dev` branch.
 - Yarn package manager was used for convenience. There should be no issue if npm is used (I tested this).
 
-# Further Notes
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
