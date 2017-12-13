@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { TooltipManagerDirective } from './directives/tooltip-manager.directive';
 import { ManagedTooltipButtonComponent } from './managed-tooltip-button/managed-tooltip-button.component';
 import { AssignmentPageComponent } from './assignment-page/assignment-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 const appRoutes: Routes = [
+  { path: '', component: HomePageComponent },
   { path: 'assignment', component: AssignmentPageComponent }
 ];
 
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
     AppComponent,
     TooltipManagerDirective,
     ManagedTooltipButtonComponent,
-    AssignmentPageComponent
+    AssignmentPageComponent,
+    HomePageComponent
   ],
   imports: [
     NgbModule.forRoot(),
