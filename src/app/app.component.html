@@ -11,7 +11,7 @@
       <ng-template #fooTooltipTemplate>
         You clicked Foo. Click outside this tooltip to close it, even if it's in Foo again!
       </ng-template>
-      <button type="button" tooltipManager [ngbTooltip]="fooTooltipTemplate" placement="top" triggers="manual" class="btn btn-primary btn-lg btn-block">
+      <button type="button" tooltipManager [ngbTooltip]="fooTooltipTemplate" triggers="manual" placement="top" container="body" class="btn btn-primary btn-lg btn-block">
         Foo
       </button>
     </div>
@@ -19,7 +19,7 @@
       <ng-template #barTooltipTemplate>
         You clicked Bar. Click outside this tooltip to close it, even if it's in Bar again!
       </ng-template>
-      <button type="button" tooltipManager [ngbTooltip]="barTooltipTemplate" placement="top" triggers="manual" class="btn btn-primary btn-lg btn-block">
+      <button type="button" tooltipManager [ngbTooltip]="barTooltipTemplate" triggers="manual" placement="top" container="body" class="btn btn-primary btn-lg btn-block">
         Bar
       </button>
     </div>
