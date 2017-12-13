@@ -11,6 +11,13 @@ export class TooltipManagerDirective {
     this.tooltipId = (tooltip as any)._ngbTooltipWindowId;
   }
 
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.keyCode == 27) {
+      this.tooltip.close();
+    }
+  }
+
   @HostListener('document:click', ['$event'])
   private documentClick(event: MouseEvent): void {
 
