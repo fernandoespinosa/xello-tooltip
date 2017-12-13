@@ -4,12 +4,14 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppComponent } from './app.component';
 import { TooltipManagerDirective } from './directives/tooltip-manager.directive';
+import { ManagedTooltipButtonComponent } from './managed-tooltip-button/managed-tooltip-button.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TooltipManagerDirective
+    TooltipManagerDirective,
+    ManagedTooltipButtonComponent
   ],
   imports: [
     NgbModule.forRoot(),
