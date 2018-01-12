@@ -2,7 +2,7 @@
   <ng-template #tooltipTemplate>
     You clicked button {{ name }}. Click outside this tooltip to close it, even if it's inside {{ name }} again!
   </ng-template>
-  <button type="button" tooltipManager [ngbTooltip]="tooltipTemplate" triggers="manual" placement="top" container="body" class="btn btn-primary btn-lg btn-block">
+  <button type="button" tooltipManager [ngbTooltip]="tooltipTemplate" triggers="manual" container="body" class="btn btn-primary btn-lg btn-block">
     {{ name }}
   </button>
 </div>

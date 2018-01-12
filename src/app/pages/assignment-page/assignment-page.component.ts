@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './assignment-page.component.html',
   styleUrls: ['./assignment-page.component.scss']
 })
-export class AssignmentPageComponent implements OnInit {
+export class AssignmentPageComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  public randomNumbers: Array<number> = Array.apply(null, { length: 100 }).map(Function.call, Math.random);
 
 }

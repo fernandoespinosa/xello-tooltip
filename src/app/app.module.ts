@@ -5,9 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { TooltipManagerDirective } from './directives/tooltip-manager.directive';
-import { ManagedTooltipButtonComponent } from './managed-tooltip-button/managed-tooltip-button.component';
-import { AssignmentPageComponent } from './assignment-page/assignment-page.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { ManagedTooltipButtonComponent } from './components/managed-tooltip-button/managed-tooltip-button.component';
+import { AssignmentPageComponent } from './pages/assignment-page/assignment-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
