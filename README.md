@@ -33,7 +33,7 @@
 
 ### Bonus
 - If you scroll down to an open tooltip it should detect being at the edge of the screen and change position to be below the button +++
-  - ... :worried:
+  - Attempted to achive this by handling `document:scroll` in `TooltipManagerDirective` and checking for tooltip viewport overflow due to scrolling.
 - Style using Bootstrap sass ++
   - Project was bootstrapped with Angular CLI to use Sass from the beginning:
   ```
